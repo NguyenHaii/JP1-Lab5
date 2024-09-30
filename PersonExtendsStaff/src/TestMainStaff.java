@@ -42,12 +42,12 @@ public class TestMainStaff {
         StaffController.getByName(scanner.nextLine())
                 .forEach(System.out::println);
 
-        System.out.print("Nhap ten cua nguoi ban muon doi : ");
-        String currentName = scanner.nextLine();
+        System.out.print("Nhap id cua nguoi ban muon doi : ");
+        String idname = scanner.nextLine();
         System.out.print("Nhap ten moi : ");
         String newName = scanner.nextLine();
 
-        StaffController.ChangeName(currentName, newName);
+        StaffController.ChangeName(idname, newName);
         System.out.println("Ten moi la :");
         System.out.println(newName);
     }
