@@ -36,11 +36,12 @@ public class StaffController {
     }
 
     //    Cau3:
-    public static boolean ChangeName(String currentName, String newName) {
-        Optional<Staff> staffMembers = getByName(currentName).stream().findFirst();
-        staffMembers.ifPresent(staffMember -> staffMember.changeName(newName));
-        return staffMembers.isPresent();
-    }
+   public static void ChangeName(String id , String newName ){
+       staff.stream()
+           .filter(staff -> staff.getId().equals(id))
+           .foreach(staff -> staff.setName(newName));
+
+    
 
 
 }
