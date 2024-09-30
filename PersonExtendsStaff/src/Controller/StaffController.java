@@ -13,14 +13,11 @@ public class StaffController {
     }
 
 //Cau1:
-//    public List<Staff> getMaxPayFemales() {
-//        Optional<Staff> maxPay = staffs.stream()
-//                .filter(staff -> staff.getGender() == Gender.F)
-//                .max(Comparator.comparing(Staff::getPay));
-//        return staffs.stream()
-//                .filter(staff -> staff.getGender() == Gender.F && staff.getPay() == maxPay)
-//                .toList();
-//    } Em chua lam duoc phan nay , java bao la toan tu == khong ap dung len double duoc a
+   public Optional<Staff> getMaxPayFemales() {
+       return staffs.stream()
+               .filter(staff -> staff.getGender() == Gender.F)
+               .max(Comparator.comparing(Staff::getPay));
+  } 
 
 
     //Cau2:
