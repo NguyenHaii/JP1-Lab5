@@ -6,7 +6,7 @@ public class Staff extends Person{
     private String id;
     private String school;
     private double pay;
-    private LocalDate DateJoin;
+    private LocalDate dateJoin;
     private Gender gender;
 
     public Staff(){;}
@@ -19,7 +19,7 @@ public class Staff extends Person{
         this.id = id;
         this.school = school;
         this.pay = pay;
-        this.DateJoin = dateJoin;
+        this.dateJoin = dateJoin;
         this.gender = gender;
     }
 
@@ -59,12 +59,12 @@ public class Staff extends Person{
         this.pay = pay;
     }
 
-    public LocalDate getDateJoin() {
-        return DateJoin;
+    public LocalDate getdateJoin() {
+        return dateJoin;
     }
 
-    public void setDateJoin(LocalDate dateJoin) {
-        DateJoin = dateJoin;
+    public void setdateJoin(LocalDate dateJoin) {
+        dateJoin = dateJoin;
     }
 
     public Gender getGender() {
@@ -79,10 +79,12 @@ public class Staff extends Person{
     public String toString() {
         return "Staff{" +
                 "id='" + id + '\'' +
+                ",name=" + name +'\' ' +
                 ", school='" + school + '\'' +
                 ", pay=" + pay +
-                ", DateJoin=" + DateJoin +
+                ", dateJoin=" + DateJoin +
                 ", gender=" + gender +
+                ",address=" + address +
                 '}';
     }
 }
